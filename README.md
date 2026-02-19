@@ -16,7 +16,7 @@ This training module covers the essential Spryker concepts through 4 progressive
 
 ## 🎯 Prerequisites
 
-- PHP 8.1 or higher
+- PHP 8.4 or higher
 - Spryker project (B2B/B2C Demo Shop or Suite)
 - Basic understanding of MVC architecture
 - Docker environment
