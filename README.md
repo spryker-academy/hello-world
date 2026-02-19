@@ -27,10 +27,10 @@ This training module covers the essential Spryker concepts through 4 progressive
 
 ```bash
 # Start with the skeleton version for hands-on learning
-composer require spryker-academy/hello-world:1.0-skeleton
+composer require spryker-academy/hello-world:1.0.0-skeleton
 
 # Or install complete version to see the solution
-composer require spryker-academy/hello-world:1.0-complete
+composer require spryker-academy/hello-world:1.0.0-complete
 ```
 
 ### Install from Branch (Alternative)
@@ -51,7 +51,7 @@ composer require spryker-academy/hello-world:dev-ilt/202512.0/basics/hello-world
 
 **Install:**
 ```bash
-composer require spryker-academy/hello-world:1.0-skeleton
+composer require spryker-academy/hello-world:1.0.0-skeleton
 ```
 
 **Access:**
@@ -68,7 +68,7 @@ http://backoffice.eu.spryker.local/hello-world
 
 **Install:**
 ```bash
-composer require spryker-academy/hello-world:2.0-skeleton
+composer require spryker-academy/hello-world:2.0.0-skeleton
 ```
 
 ### Module 3: Message Table Schema (v3.0)
@@ -80,7 +80,7 @@ composer require spryker-academy/hello-world:2.0-skeleton
 
 **Install:**
 ```bash
-composer require spryker-academy/hello-world:3.0-skeleton
+composer require spryker-academy/hello-world:3.0.0-skeleton
 ```
 
 ### Module 4: Module Layers (v4.0)
@@ -93,7 +93,7 @@ composer require spryker-academy/hello-world:3.0-skeleton
 
 **Install:**
 ```bash
-composer require spryker-academy/hello-world:4.0-skeleton
+composer require spryker-academy/hello-world:4.0.0-skeleton
 ```
 
 ## ⚙️ Configuration
@@ -141,17 +141,17 @@ composer show spryker-academy/hello-world
 
 ```bash
 # Switch to complete version to check your solution
-composer require spryker-academy/hello-world:1.0-complete
+composer require spryker-academy/hello-world:1.0.0-complete
 
 # Go back to skeleton to practice
-composer require spryker-academy/hello-world:1.0-skeleton
+composer require spryker-academy/hello-world:1.0.0-skeleton
 ```
 
 ### Upgrade to Next Module
 
 ```bash
 # After completing Module 1, move to Module 2
-composer require spryker-academy/hello-world:2.0-skeleton
+composer require spryker-academy/hello-world:2.0.0-skeleton
 ```
 
 ## 🏗️ Module Structure
