@@ -5,12 +5,8 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-declare(strict_types = 1);
-
 namespace SprykerAcademy\Zed\HelloWorld\Communication\Controller;
 
-use Generated\Shared\Transfer\MessageCriteriaTransfer;
-use Generated\Shared\Transfer\MessageTransfer;
 use Spryker\Zed\Kernel\Communication\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -19,22 +15,20 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class MessageController extends AbstractController
 {
-    public function addAction(Request $request): array
+    public function addAction(Request $request)
     {
-        $message = $request->query->get('message', 'Oskar');
-        $messageCriteriaTransfer = new MessageCriteriaTransfer();
-        $messageCriteriaTransfer->setMessage($message);
+        $message = $request->query->get('message', 'Hello World');
 
-        $messageResponseTransfer = $this->getFacade()
-            ->findMessage($messageCriteriaTransfer);
-
-        $messageTransfer = $messageResponseTransfer->getMessage();
+        $messageCriteriaTransfer = null;
+        // TODO: Instantiate MessageCriteriaTransfer and set the message
+// Use the facade with the method $this->getFacadde() and calle findMessage() with the message criteria transfer
+        //Assign the return value to
+        $messageTransfer = null;
 
         if (!$messageTransfer) {
-            $messageTransfer = new MessageTransfer();
-            $messageTransfer->setMessage($message);
-
-            $messageTransfer = $this->getFacade()->createMessage($messageTransfer);
+            // TODO: If there isn't a message with that name already,
+            // create a MessageTransfer and set the right message name
+            // and persist it with the help of the method `$this->getFacade()->createMessage()`
         }
 
         return $this->viewResponse([

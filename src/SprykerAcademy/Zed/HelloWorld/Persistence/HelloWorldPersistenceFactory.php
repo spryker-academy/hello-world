@@ -5,8 +5,6 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-declare(strict_types = 1);
-
 namespace SprykerAcademy\Zed\HelloWorld\Persistence;
 
 use Orm\Zed\HelloWorld\Persistence\PyzMessageQuery;
@@ -17,9 +15,12 @@ class HelloWorldPersistenceFactory extends AbstractPersistenceFactory
 {
     public function createMessageQuery(): PyzMessageQuery
     {
-        return PyzMessageQuery::create();
+        // TODO
     }
 
+    /**
+     * @return \SprykerAcademy\Zed\HelloWorld\Persistence\Mapper\MessageMapper
+     */
     public function createMessageMapper(): MessageMapper
     {
         return new MessageMapper();

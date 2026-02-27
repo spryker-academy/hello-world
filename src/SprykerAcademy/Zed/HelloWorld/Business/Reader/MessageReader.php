@@ -5,8 +5,6 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-declare(strict_types = 1);
-
 namespace SprykerAcademy\Zed\HelloWorld\Business\Reader;
 
 use Generated\Shared\Transfer\MessageCriteriaTransfer;
@@ -15,22 +13,15 @@ use SprykerAcademy\Zed\HelloWorld\Persistence\HelloWorldRepositoryInterface;
 
 class MessageReader
 {
-    public function __construct(protected HelloWorldRepositoryInterface $helloWorldRepository)
-    {
-    }
+    protected HelloWorldRepositoryInterface $helloWorldRepository;
 
     public function findMessage(MessageCriteriaTransfer $messageCriteria): MessageResponseTransfer
     {
-        $messageTransfer = $this->helloWorldRepository->findMessage($messageCriteria);
-        $messageResponseTransfer = new MessageResponseTransfer();
+        $messageTransfer = null;// TODO: Use the HelloWorldRepository to find a message
 
-        if ($messageTransfer === null) {
-            $messageResponseTransfer->setIsSuccessful(false);
-        } else {
-            $messageResponseTransfer->setIsSuccessful(true);
-            $messageResponseTransfer->setMessage($messageTransfer);
-        }
-
-        return $messageResponseTransfer;
+        // TODO: Create and return MessageResponseTransfer
+        // and set the properties `isSuccessful` and `message` based on
+        // the return value from the HelloWorldRepository
+        // Hint: If no message is returned from the repository `isSuccessful` must be false
     }
 }

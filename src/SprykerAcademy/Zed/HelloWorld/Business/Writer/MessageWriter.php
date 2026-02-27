@@ -5,8 +5,6 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-declare(strict_types = 1);
-
 namespace SprykerAcademy\Zed\HelloWorld\Business\Writer;
 
 use Generated\Shared\Transfer\MessageTransfer;
@@ -14,12 +12,10 @@ use SprykerAcademy\Zed\HelloWorld\Persistence\HelloWorldEntityManagerInterface;
 
 class MessageWriter
 {
-    public function __construct(protected HelloWorldEntityManagerInterface $helloWorldEntityManager)
-    {
-    }
+    protected HelloWorldEntityManagerInterface $helloWorldEntityManager;
 
     public function create(MessageTransfer $messageTransfer): MessageTransfer
     {
-        return $this->helloWorldEntityManager->createMessage($messageTransfer);
+        // TODO: Use the helloWorldEntityManager to create an antelope
     }
 }

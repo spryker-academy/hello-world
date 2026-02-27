@@ -5,8 +5,6 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-declare(strict_types = 1);
-
 namespace SprykerAcademy\Client\HelloWorld;
 
 use Spryker\Client\Kernel\AbstractFactory;
@@ -17,7 +15,9 @@ class HelloWorldFactory extends AbstractFactory
 {
     public function createHelloWorldStub(): HelloWorldStub
     {
-        return new HelloWorldStub($this->getZedRequestClient());
+        // TODO: Instantiate the HelloWorldStub with the right dependency
+        // Hint: You can see the needed parameter(s) for the constructor either through your IDE
+        // or by looking into the parent class of HelloWorldStub
     }
 
     public function getZedRequestClient(): ZedRequestClientInterface

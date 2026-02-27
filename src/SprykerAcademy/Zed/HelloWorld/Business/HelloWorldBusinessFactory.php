@@ -5,8 +5,6 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-declare(strict_types = 1);
-
 namespace SprykerAcademy\Zed\HelloWorld\Business;
 
 use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
@@ -21,15 +19,13 @@ class HelloWorldBusinessFactory extends AbstractBusinessFactory
 {
     public function createMessageWriter(): MessageWriter
     {
-        return new MessageWriter(
-            $this->getEntityManager(),
-        );
+        // TODO: Instantiate the MessageWriter with the right dependency
+        // Hint: You can access the MessageEntityManager through $this->getEntityManager()
     }
 
     public function createMessageReader(): MessageReader
     {
-        return new MessageReader(
-            $this->getRepository(),
-        );
+        // TODO: Instantiate the MessageReader with the right dependency
+        // Hint: You can access the MessageEntityRepository through $this->getRepository()
     }
 }

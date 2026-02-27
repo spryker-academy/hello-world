@@ -5,8 +5,6 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-declare(strict_types = 1);
-
 namespace SprykerAcademy\Zed\HelloWorld\Business;
 
 use Generated\Shared\Transfer\MessageCriteriaTransfer;
@@ -25,10 +23,13 @@ class HelloWorldFacade extends AbstractFacade implements HelloWorldFacadeInterfa
      * @api
      *
      * @param \Generated\Shared\Transfer\MessageTransfer $messageTransfer
+     *
+     * @return \Generated\Shared\Transfer\MessageTransfer
      */
     public function createMessage(MessageTransfer $messageTransfer): MessageTransfer
     {
-        return $this->getFactory()->createMessageWriter()->create($messageTransfer);
+        // TODO: Use the factory to create a MessageWriter and use it to create a message
+        // Hint: You can access the HelloWorldBusinessFactory through $this->getFactory()
     }
 
     /**
@@ -37,9 +38,11 @@ class HelloWorldFacade extends AbstractFacade implements HelloWorldFacadeInterfa
      * @api
      *
      * @param \Generated\Shared\Transfer\MessageCriteriaTransfer $messageCriteria
+     *
+     * @return \Generated\Shared\Transfer\MessageResponseTransfer
      */
     public function findMessage(MessageCriteriaTransfer $messageCriteria): MessageResponseTransfer
     {
-        return $this->getFactory()->createMessageReader()->findMessage($messageCriteria);
+        // TODO: Use the factory to create a MessageReader and use it to find a message
     }
 }

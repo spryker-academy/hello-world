@@ -1,21 +1,16 @@
 <?php
 
-/**
- * This file is part of the Spryker Commerce OS.
- * For full license information, please view the LICENSE file that was distributed with this source code.
- */
-
-declare(strict_types = 1);
-
 namespace SprykerAcademy\Yves\HelloWorldPage;
 
-use Spryker\Yves\Kernel\AbstractFactory;
 use SprykerAcademy\Client\HelloWorld\HelloWorldClientInterface;
+use Spryker\Yves\Kernel\AbstractFactory;
 
 class HelloWorldPageFactory extends AbstractFactory
 {
     public function getHelloWorldClient(): HelloWorldClientInterface
     {
-        return $this->getProvidedDependency(HelloWorldPageDependencyProvider::CLIENT_HELLO_WORLD);
+        // TODO: Get the provided dependency for the HelloWorldClient
+        // Hint-1: Have a look at src/SprykerAcademy/Client/HelloWorld/HelloWorldFactory.php::getZedRequestClient() for the right syntax
+        // Hint-2: The name of the constant to use is 'HelloWorldPageDependencyProvider::CLIENT_HELLO_WORLD'
     }
 }

@@ -5,8 +5,6 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-declare(strict_types = 1);
-
 namespace SprykerAcademy\Client\HelloWorld;
 
 use Spryker\Client\Kernel\AbstractDependencyProvider;
@@ -14,9 +12,9 @@ use Spryker\Client\Kernel\Container;
 
 class HelloWorldDependencyProvider extends AbstractDependencyProvider
 {
-    public const string CLIENT_ZED_REQUEST = 'CLIENT_ZED_REQUEST';
+    public const CLIENT_ZED_REQUEST = 'CLIENT_ZED_REQUEST';
 
-    public const string CLIENT_STORE = 'CLIENT_STORE';
+    public const CLIENT_STORE = 'CLIENT_STORE';
 
     public function provideServiceLayerDependencies(Container $container): Container
     {
@@ -28,9 +26,9 @@ class HelloWorldDependencyProvider extends AbstractDependencyProvider
 
     protected function addZedRequestClient(Container $container): Container
     {
-        $container->set(static::CLIENT_ZED_REQUEST, fn () => $container->getLocator()->zedRequest()->client());
-
-        return $container;
+        // TODO: Make the ZedRequestClient available
+        // Hint: Take a look at the `addStoreClient()` method - The only things different are the constant
+        // and what you write after the `getLocator()`
     }
 
     protected function addStoreClient(Container $container): Container
