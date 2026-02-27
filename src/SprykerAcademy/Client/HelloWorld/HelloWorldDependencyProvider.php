@@ -5,8 +5,6 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-declare(strict_types = 1);
-
 namespace SprykerAcademy\Client\HelloWorld;
 
 use Spryker\Client\Kernel\AbstractDependencyProvider;
@@ -28,7 +26,7 @@ class HelloWorldDependencyProvider extends AbstractDependencyProvider
 
     protected function addZedRequestClient(Container $container): Container
     {
-        $container->set(static::CLIENT_ZED_REQUEST, fn () => $container->getLocator()->zedRequest()->client());
+        $container->set(static::CLIENT_ZED_REQUEST, fn() => $container->getLocator()->zedRequest()->client());
 
         return $container;
     }

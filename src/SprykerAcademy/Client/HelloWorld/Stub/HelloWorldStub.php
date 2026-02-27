@@ -5,8 +5,6 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-declare(strict_types = 1);
-
 namespace SprykerAcademy\Client\HelloWorld\Stub;
 
 use Generated\Shared\Transfer\MessageCriteriaTransfer;
@@ -30,7 +28,9 @@ class HelloWorldStub
 
     public function findMessage(MessageCriteriaTransfer $messageCriteria): MessageResponseTransfer
     {
-        /** @var \Generated\Shared\Transfer\MessageResponseTransfer $messageResponseTransfer */
+        /** @var MessageResponseTransfer $messageResponseTransfer */
+
+
         $messageResponseTransfer = $this->zedRequestClient->call('/hello-world/gateway/find-message', $messageCriteria);
 
         return $messageResponseTransfer;

@@ -5,8 +5,6 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-declare(strict_types = 1);
-
 namespace SprykerAcademy\Zed\HelloWorld\Communication\Controller;
 
 use Generated\Shared\Transfer\MessageCriteriaTransfer;
@@ -18,6 +16,8 @@ use Spryker\Zed\Kernel\Communication\Controller\AbstractGatewayController;
  */
 class GatewayController extends AbstractGatewayController
 {
+
+
     public function findMessageAction(MessageCriteriaTransfer $messageCriteria): MessageResponseTransfer
     {
         return $this->getFacade()->findMessage($messageCriteria);

@@ -5,8 +5,6 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-declare(strict_types = 1);
-
 namespace SprykerAcademy\Zed\HelloWorld\Persistence\Mapper;
 
 use Generated\Shared\Transfer\MessageTransfer;
@@ -17,6 +15,8 @@ class MessageMapper
     /**
      * @param \Orm\Zed\HelloWorld\Persistence\PyzMessage $messageEntity
      * @param \Generated\Shared\Transfer\MessageTransfer $messageTransfer
+     *
+     * @return \Generated\Shared\Transfer\MessageTransfer
      */
     public function mapEntityToMessageTransfer(
         PyzMessage $messageEntity,
@@ -28,6 +28,8 @@ class MessageMapper
     /**
      * @param \Generated\Shared\Transfer\MessageTransfer $messageTransfer
      * @param \Orm\Zed\HelloWorld\Persistence\PyzMessage $messageEntity
+     *
+     * @return \Orm\Zed\HelloWorld\Persistence\PyzMessage
      */
     public function mapMessageTransferToEntity(
         MessageTransfer $messageTransfer,

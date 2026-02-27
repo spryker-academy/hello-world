@@ -5,8 +5,6 @@
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-declare(strict_types = 1);
-
 namespace SprykerAcademy\Client\HelloWorld;
 
 use Generated\Shared\Transfer\MessageCriteriaTransfer;
@@ -22,6 +20,8 @@ use Spryker\Client\Kernel\AbstractClient;
  */
 class HelloWorldClient extends AbstractClient implements HelloWorldClientInterface
 {
+
+
     public function findMessage(MessageCriteriaTransfer $messageCriteria): MessageResponseTransfer
     {
         return $this->getFactory()->createHelloWorldStub()->findMessage($messageCriteria);
