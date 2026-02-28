@@ -1,0 +1,21 @@
+namespace: SprykerAcademyTest\Zed\HelloWorld
+
+paths:
+    tests: .
+    data: _data
+    support: _support
+    output: _output
+
+suites:
+    Exercise1:
+        path: Exercise1
+        actor: HelloWorldBusinessTester
+        modules:
+            enabled:
+                - Asserts
+    Exercise2:
+        path: Exercise2
+        actor: HelloWorldBusinessTester
+        modules:
+            enabled:
+                - Asserts
