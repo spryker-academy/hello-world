@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * This file is part of the Spryker Commerce OS.
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+
+declare(strict_types = 1);
+
+namespace SprykerAcademy\Client\HelloWorld;
+
+use Generated\Shared\Transfer\MessageCriteriaTransfer;
+use Generated\Shared\Transfer\MessageResponseTransfer;
+use Generated\Shared\Transfer\MessageTransfer;
+use Spryker\Client\Kernel\AbstractClient;
+
+/**
+ * {@inheritDoc}
+ *
+ * @api
+ *
+ * @method \SprykerAcademy\Client\HelloWorld\HelloWorldFactory getFactory()
+ */
+class HelloWorldClient extends AbstractClient implements HelloWorldClientInterface
+{
+    public function findMessage(MessageCriteriaTransfer $messageCriteria): MessageResponseTransfer
+    {
+        return $this->getFactory()->createHelloWorldStub()->findMessage($messageCriteria);
+    }
+
+    public function createMessage(MessageTransfer $messageTransfer): MessageTransfer
+    {
+        return $this->getFactory()
+            ->createHelloWorldStub()
+            ->createMessage($messageTransfer);
+    }
+}
