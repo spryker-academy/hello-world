@@ -1,0 +1,56 @@
+{# Async content fragment - returned in JSON response to replace the content area #}
+
+<div class="box">
+    <h4>My Contact Requests</h4>
+
+    {% if messages is not empty %}
+        <table class="table table--expand">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Message</th>
+                    <th>Created</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contactRequest in messages %}
+                    <tr>
+                        <td>{{ contactRequest.idContactRequest }}</td>
+                        <td>{{ contactRequest.message }}</td>
+                        <td>{{ contactRequest.createdAt | date('Y-m-d H:i') }}</td>
+                        <td>
+                            <form method="post" style="display:inline">
+                                <input type="hidden" name="idContactRequest" value="{{ contactRequest.idContactRequest }}">
+                                <button type="submit"
+                                        data-message-ajax-submit
+                                        formaction="{{ path('customer/messages/async/delete') }}"
+                                        class="button button--hollow button--alert button--small">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>You have no contact requests yet.</p>
+    {% endif %}
+</div>
+
+<div class="box">
+    <h4>Add a New Contact Request</h4>
+    <form method="post">
+        <div class="form spacing-bottom">
+            {{ form_widget(contactRequestForm.message) }}
+        </div>
+        {{ form_rest(contactRequestForm) }}
+        <button type="submit"
+                data-message-ajax-submit
+                formaction="{{ path('customer/messages/async/add') }}"
+                class="button button--expand-sm-only button--success">
+            Add Contact Request
+        </button>
+    </form>
+</div>
