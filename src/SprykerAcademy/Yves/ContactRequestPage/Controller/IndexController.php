@@ -8,7 +8,7 @@ use SprykerShop\Yves\ShopApplication\Controller\AbstractController;
 /**
  * @method \SprykerAcademy\Yves\ContactRequestPage\ContactRequestPageFactory getFactory()
  */
-class ContactRequestController extends AbstractController
+class IndexController extends AbstractController
 {
     public function getAction(string $name)
     {
@@ -22,7 +22,7 @@ class ContactRequestController extends AbstractController
         return $this->view(
             ['message' => $contactRequestResponseTransfer->getContactRequest()],
             [],
-            '@ContactRequestPage/views/message/get.twig'
+            '@ContactRequestPage/views/contact-request/get.twig'
         );
     }
 }
