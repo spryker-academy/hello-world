@@ -18,7 +18,7 @@ class GatewayController extends AbstractGatewayController
 {
 
 
-    public function findMessageAction(ContactRequestCriteriaTransfer $contactRequestCriteria): ContactRequestResponseTransfer
+    public function findContactRequestAction(ContactRequestCriteriaTransfer $contactRequestCriteria): ContactRequestResponseTransfer
     {
         return $this->getFacade()->findContactRequest($contactRequestCriteria);
     }
