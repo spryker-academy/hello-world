@@ -15,7 +15,7 @@ class IndexController extends AbstractController
 
         return $this->viewResponse([
             // TODO: pass the DTO to the view
-            'contactRequestText' => 'Contact Requests',
+            'contactRequestText' => 'Contact Request!',
         ]);
     }
 }
