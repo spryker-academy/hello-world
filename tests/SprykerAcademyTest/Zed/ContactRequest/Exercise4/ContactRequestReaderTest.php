@@ -30,7 +30,7 @@ class ContactRequestReaderTest extends Unit
         $contactRequestTransfer->setMessage('Hello');
 
         $repositoryMock = $this->createMock(ContactRequestRepositoryInterface::class);
-        $repositoryMock->method('findMessage')
+        $repositoryMock->method('findContactRequest')
             ->willReturn($contactRequestTransfer);
 
         $contactRequestCriteria = new ContactRequestCriteriaTransfer();
@@ -62,7 +62,7 @@ class ContactRequestReaderTest extends Unit
 
         // Arrange
         $repositoryMock = $this->createMock(ContactRequestRepositoryInterface::class);
-        $repositoryMock->method('findMessage')
+        $repositoryMock->method('findContactRequest')
             ->willReturn(null);
 
         $contactRequestCriteria = new ContactRequestCriteriaTransfer();
